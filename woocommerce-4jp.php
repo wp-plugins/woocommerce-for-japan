@@ -45,9 +45,9 @@ class WooCommerce4jp{
 	 */
 	private function includes() {
 		// Payment Gateway
-		include_once( 'includes/gateways/bank-jp/class-wc-gateway-bank-jp.php' );	// Bank in Japan
+		include_once( plugin_dir_path( __FILE__ ).'includes/gateways/bank-jp/class-wc-gateway-bank-jp.php' );	// Bank in Japan
 		// Address field
-		include_once( 'includes/class-wc-address-field-4jp.php' );
+		include_once( plugin_dir_path( __FILE__ ).'includes/class-wc-address-field-4jp.php' );
 	}
 	/**
 	 * Init WooCommerce when WordPress Initialises.
