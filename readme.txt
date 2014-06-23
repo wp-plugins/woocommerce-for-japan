@@ -12,10 +12,12 @@ This plugin extends the WooCommerce shop plugin for Japanese situation.
 
 == Description ==
 
-In Japanese:
+= In Japanese: =
+
 このプラグインはWooCommerceを日本で使用する為に最低限必要な調整を行っています。
 
 基本的に以下の対応を行っております。
+
 1. 住所の入力項目の並び順の変更
 2. 支払い方法の銀行振込の日本表記への変更
 
@@ -23,7 +25,8 @@ In Japanese:
 その他の機能に関しては、別の追加プラグインとして追加していく予定です。
 ※このプラグインはWooCommerceの日本語レビュアー（田中　昌平）によって作成されています。
 
-In English:
+= In English: =
+
 This plugin extends the WooCommerce shop plugin for minimum necessary features in Japanese.
 
 = Key Features =
