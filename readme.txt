@@ -23,7 +23,7 @@ This plugin extends the WooCommerce shop plugin for Japanese situation.
 
 今後、順次最低限必要と思われる機能をプラスしていきます。
 その他の機能に関しては、別の追加プラグインとして追加していく予定です。
-※このプラグインはWooCommerceの日本語レビュアー（田中　昌平）によって作成されています。
+※このプラグインはWooCommerceの日本語レビュアーによって作成されています。
 
 = In English: =
 
@@ -33,7 +33,7 @@ This plugin extends the WooCommerce shop plugin for minimum necessary features i
 
 1. Change the order of Address input fields for Japan. 
 2. Add Payment Method for Bank transfer for Japanese situation.
-※This plugin is made by the WooCommerce Japanese reviewer, Shohei Tanaka.
+※This plugin is made by the WooCommerce Japanese reviewer.
 
 == Installation ==
 
