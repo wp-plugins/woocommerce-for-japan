@@ -35,7 +35,7 @@ This plugin extends the WooCommerce shop plugin for minimum necessary features i
 
 == Installation ==
 
-= In Japanese:= 
+= In Japanese: =
 = 必要条件 =
 
 * WordPress 3.8 or greater
