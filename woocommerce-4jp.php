@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce For Japan
  * Plugin URI: http://wordpress.org/plugins/woocommerce-for-japan/
  * Description: Woocommerce toolkit for Japanese use.
- * Version: 0.9.0
+ * Version: 0.9.1
  * Author: Artisan Workshop
  * Author URI: http://profiles.wordpress.org/shoheitanaka
  * Requires at least: 3.8
@@ -45,20 +45,18 @@ class WooCommerce4jp{
 	 */
 	private function includes() {
 		// Payment Gateway
-		include_once( plugin_dir_path( __FILE__ ).'includes/gateways/bank-jp/class-wc-gateway-bank-jp.php' );	// Bank in Japan
+		include_once( plugin_dir_path( __FILE__ ).'/includes/gateways/bank-jp/class-wc-gateway-bank-jp.php' );	// Bank in Japan
 		// Address field
-		include_once( plugin_dir_path( __FILE__ ).'includes/class-wc-address-field-4jp.php' );
+		include_once( plugin_dir_path( __FILE__ ).'/includes/class-wc-address-field-4jp.php' );
 	}
 	/**
 	 * Init WooCommerce when WordPress Initialises.
 	 */
 	public function init() {
-		// Before init action
-//		do_action( 'before_woocommerce_init' );
 		// Set up localisation
 		$this->load_plugin_textdomain();
-		// Init action
-//		do_action( 'woocommerce_init' );
+		// Address Fields Class load
+		new AddressField4jp();
 	}
 
 	/*

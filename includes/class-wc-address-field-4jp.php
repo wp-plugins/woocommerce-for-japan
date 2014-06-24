@@ -75,8 +75,7 @@ class AddressField4jp{
 			),
 			'state'              => array(
 				'type'        => 'state',
-				'label'       => __( 'Province', 'woocommerce-4jp' ),
-				'placeholder' => __( 'Province', 'woocommerce-4jp' ),
+				'label'       => __( 'Prefecture', 'woocommerce-4jp' ),
 				'required'    => true,
 				'class'       => array( 'form-row-last', 'address-field' ),
 				'clear'       => true,
@@ -105,25 +104,40 @@ class AddressField4jp{
 		// Billing/Shipping Specific
     public function billing_address_fields( $fields ) {
 		$address_fields = $fields;
-
+		$address_fields['billing_state'] = array(
+			'type'        => 'state',
+			'label'       => __( 'Prefecture', 'woocommerce-4jp' ),
+			'required'    => true,
+			'class'       => array( 'form-row-last', 'address-field' ),
+			'clear'       => true,
+			'validate'    => array( 'state' )
+		);
 		$address_fields['billing_email'] = array(
-				'label' 		=> __( 'Email Address', 'woocommerce-4jp' ),
-				'required' 		=> true,
-				'class' 		=> array( 'form-row-first' ),
-				'validate'		=> array( 'email' ),
-			);
-			$address_fields['billing_phone'] = array(
-				'label' 		=> __( 'Billing Phone', 'woocommerce-4jp' ),
-				'required' 		=> true,
-				'class' 		=> array( 'form-row-last' ),
-				'clear'			=> true,
-				'validate'		=> array( 'phone' ),
-			);
+			'label' 		=> __( 'Email Address', 'woocommerce-4jp' ),
+			'required' 		=> true,
+			'class' 		=> array( 'form-row-first' ),
+			'validate'		=> array( 'email' ),
+		);
+		$address_fields['billing_phone'] = array(
+			'label' 		=> __( 'Billing Phone', 'woocommerce-4jp' ),
+			'required' 		=> true,
+			'class' 		=> array( 'form-row-last' ),
+			'clear'			=> true,
+			'validate'		=> array( 'phone' ),
+		);
 		return $address_fields;
 	}
     public function shipping_address_fields( $fields ) {
 		$address_fields = $fields;
 
+		$address_fields['shipping_state'] = array(
+				'type'        => 'state',
+				'label'       => __( 'Prefecture', 'woocommerce-4jp' ),
+				'required'    => true,
+				'class'       => array( 'form-row-last', 'address-field' ),
+				'clear'       => true,
+				'validate'    => array( 'state' )
+			);
 		$address_fields['shipping_phone'] = array(
 			'label' 		=> __( 'Shipping Phone', 'woocommerce-4jp' ),
 			'required' 		=> true,
@@ -134,4 +148,3 @@ class AddressField4jp{
 	return $address_fields;
 	}
 }
-        $AddressField4jp = new AddressField4jp();

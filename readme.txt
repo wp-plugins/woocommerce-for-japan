@@ -4,7 +4,7 @@ Donate link: http://wordpress.tanakashohei.com/
 Tags: woocommerce, ecommerce, e-commerce,
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 0.9.0
+Stable tag: 0.9.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,28 +12,25 @@ This plugin extends the WooCommerce shop plugin for Japanese situation.
 
 == Description ==
 
-= In Japanese: =
-
+In Japanese:
 このプラグインはWooCommerceを日本で使用する為に最低限必要な調整を行っています。
 
 基本的に以下の対応を行っております。
-
 1. 住所の入力項目の並び順の変更
 2. 支払い方法の銀行振込の日本表記への変更
 
 今後、順次最低限必要と思われる機能をプラスしていきます。
 その他の機能に関しては、別の追加プラグインとして追加していく予定です。
-※このプラグインはWooCommerceの日本語レビュアーによって作成されています。
+※このプラグインはWooCommerceの日本語レビュアー（田中　昌平）によって作成されています。
 
-= In English: =
-
+In English:
 This plugin extends the WooCommerce shop plugin for minimum necessary features in Japanese.
 
 = Key Features =
 
 1. Change the order of Address input fields for Japan. 
 2. Add Payment Method for Bank transfer for Japanese situation.
-※This plugin is made by the WooCommerce Japanese reviewer.
+※This plugin is made by the WooCommerce Japanese reviewer, Shohei Tanaka.
 
 == Installation ==
 
