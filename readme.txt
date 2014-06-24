@@ -12,7 +12,8 @@ This plugin extends the WooCommerce shop plugin for Japanese situation.
 
 == Description ==
 
-In Japanese:
+= In Japanese: =
+
 このプラグインはWooCommerceを日本で使用する為に最低限必要な調整を行っています。
 
 基本的に以下の対応を行っております。
@@ -21,20 +22,20 @@ In Japanese:
 
 今後、順次最低限必要と思われる機能をプラスしていきます。
 その他の機能に関しては、別の追加プラグインとして追加していく予定です。
-※このプラグインはWooCommerceの日本語レビュアー（田中　昌平）によって作成されています。
+※このプラグインはWooCommerceの日本語レビュアーによって作成されています。
 
-In English:
+= In English: =
 This plugin extends the WooCommerce shop plugin for minimum necessary features in Japanese.
 
 = Key Features =
 
 1. Change the order of Address input fields for Japan. 
 2. Add Payment Method for Bank transfer for Japanese situation.
-※This plugin is made by the WooCommerce Japanese reviewer, Shohei Tanaka.
+※This plugin is made by the WooCommerce Japanese reviewer.
 
 == Installation ==
 
-In Japanese:
+= In Japanese:= 
 = 必要条件 =
 
 * WordPress 3.8 or greater
@@ -51,7 +52,7 @@ WordPressに標準装備のプラグインの新規追加からインストー�
 = 手動インストール =
 手動でダウンロードファイルをダウンロードして頂いて、FTPソフト等でサーバーにアップして設定してください。
 
-In English:
+= In English: =
 = Minimum Requirements =
 
 * WordPress 3.8 or greater
@@ -71,8 +72,8 @@ The manual installation method involves downloading our plugin and uploading it 
 == Frequently Asked Questions ==
 = In Japanese: =
 
-質問：日本語向けのフォーラムとか無いんですか？
-答え：現在、準備中です。今しばらくお待ちください。
+質問： 日本語向けのフォーラムとか無いんですか？
+答え： 現在、準備中です。今しばらくお待ちください。
 
 = In English: =
 
@@ -85,6 +86,8 @@ A: Is preparing.
 2. Admin Panel Payment Gateways
 
 == Changelog ==
+= 0.9.1 =
+some bugs fixed
 
 = 0.9.0 =
 make beta version
