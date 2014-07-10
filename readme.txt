@@ -16,13 +16,13 @@ This plugin extends the WooCommerce shop plugin for Japanese situation.
 
 このプラグインはWooCommerceを日本で使用する為に最低限必要な調整を行っています。
 
-基本的に以下の対応を行っております。
-1. 住所の入力項目の並び順の変更
-2. 支払い方法の銀行振込の日本表記への変更
-3. 管理画面での住所の入力項目の並び順の変更
+基本的に以下の対応を行っております。<br />
+1. 住所の入力項目の並び順の変更<br />
+2. 支払い方法の銀行振込の日本表記への変更<br />
+3. 管理画面での住所の入力項目の並び順の変更<br />
 
-今後、順次最低限必要と思われる機能をプラスしていきます。
-その他の機能に関しては、別の追加プラグインとして追加していく予定です。
+今後、順次最低限必要と思われる機能をプラスしていきます。<br />
+その他の機能に関しては、別の追加プラグインとして追加していく予定です。<br />
 ※このプラグインはWooCommerceの日本語レビュアーによって作成されています。
 
 = In English: =
@@ -46,9 +46,9 @@ This plugin extends the WooCommerce shop plugin for minimum necessary features i
 * MySQL version 5.0 or greater
 
 = 自動インストール =
-WordPressに標準装備のプラグインの新規追加からインストールしてください。
-プラグイン>新規追加
-検索窓にて「WooCommerce For Japan」と入力してクリックして頂けたら出てくると思います。
+WordPressに標準装備のプラグインの新規追加からインストールしてください。<br />
+プラグイン>新規追加<br />
+検索窓にて「WooCommerce For Japan」と入力してクリックして頂けたら出てくると思います。<br />
 そして、このプラグインが出てきたら「いますぐインストール」をクリックしたらインストールされます。
 
 = 手動インストール =
@@ -80,7 +80,7 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 
 = In English: =
 
-Q: Do you have the forum of this plugin in Japanese?
+Q: Do you have the forum of this plugin in Japanese?<br />
 A: Is preparing.
 
 == Screenshots ==
