@@ -1,10 +1,10 @@
 === WooCommerce For Japan ===
 Contributors: shohei.tanaka
-Donate link: http://wordpress.tanakashohei.com/
+Donate link: http://wc.artws.info/
 Tags: woocommerce, ecommerce, e-commerce,
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 0.9.1
+Stable tag: 0.9.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,6 +19,7 @@ This plugin extends the WooCommerce shop plugin for Japanese situation.
 基本的に以下の対応を行っております。
 1. 住所の入力項目の並び順の変更
 2. 支払い方法の銀行振込の日本表記への変更
+3. 管理画面での住所の入力項目の並び順の変更
 
 今後、順次最低限必要と思われる機能をプラスしていきます。
 その他の機能に関しては、別の追加プラグインとして追加していく予定です。
@@ -31,6 +32,7 @@ This plugin extends the WooCommerce shop plugin for minimum necessary features i
 
 1. Change the order of Address input fields for Japan. 
 2. Add Payment Method for Bank transfer for Japanese situation.
+3. Change the order of Address input fields for Japan in Admin Control panel. 
 ※This plugin is made by the WooCommerce Japanese reviewer.
 
 == Installation ==
@@ -72,8 +74,9 @@ The manual installation method involves downloading our plugin and uploading it 
 == Frequently Asked Questions ==
 = In Japanese: =
 
-質問： 日本語向けのフォーラムとか無いんですか？
-答え： 現在、準備中です。今しばらくお待ちください。
+質問： 日本語向けのフォーラムとか無いんですか？<br />
+答え： 以下のURLで対応しております。<br />
+http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 
 = In English: =
 
@@ -86,6 +89,9 @@ A: Is preparing.
 2. Admin Panel Payment Gateways
 
 == Changelog ==
+= 0.9.2 =
+Add Admin Control panel address field
+
 = 0.9.1 =
 some bugs fixed
 

@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce For Japan
  * Plugin URI: http://wordpress.org/plugins/woocommerce4jp/
  * Description: Woocommerce toolkit for Japanese use.
- * Version: 0.9.0
+ * Version: 0.9.2
  * Author: Artisan Workshop
  * Author URI: http://profiles.wordpress.org/shoheitanaka
  * Requires at least: 3.8
@@ -23,6 +23,7 @@
      *
      * @return array         New fields.
      */
+
 class AddressField4jp{
 	
 	/**
@@ -41,6 +42,10 @@ class AddressField4jp{
 		add_filter( 'woocommerce_default_address_fields',array( &$this,  'address_fields'));
 		add_filter( 'woocommerce_billing_fields',array( &$this,  'billing_address_fields'));
 		add_filter( 'woocommerce_shipping_fields',array( &$this,  'shipping_address_fields'));
+		// Admin Edit Address
+		add_filter( 'woocommerce_admin_billing_fields',array( &$this,  'admin_billing_address_fields'));
+		add_filter( 'woocommerce_admin_shipping_fields',array( &$this,  'admin_shipping_address_fields'));
+		
 		}
 	}
     public function address_fields( $fields ) {
@@ -147,4 +152,114 @@ class AddressField4jp{
 		);
 	return $address_fields;
 	}
+    public function admin_billing_address_fields( $fields ) {
+		$fields=array(
+			'country' => array(
+				'label' => __( 'Country', 'woocommerce' ),
+				'show'	=> false,
+				'type'	=> 'select',
+				'options' => array( '' => __( 'Select a country&hellip;', 'woocommerce' ) ) + WC()->countries->get_allowed_countries()
+				),
+			'state' => array(
+				'label' => __( 'State/County', 'woocommerce' ),
+				'show'	=> false,
+				'type'	=> 'select',
+				'options' => array( '' => __( 'Select a state&hellip;', 'woocommerce' ) )
+				),
+			'postcode' => array(
+				'label' => __( 'Postcode', 'woocommerce' ),
+				'show'	=> false,
+				),
+			'city' => array(
+				'label' => __( 'City', 'woocommerce' ),
+				'show'	=> false
+				),
+			'address_1' => array(
+				'label' => __( 'Address 1', 'woocommerce' ),
+				'show'	=> false
+				),
+			'address_2' => array(
+				'label' => __( 'Address 2', 'woocommerce' ),
+				'show'	=> false
+				),
+			'company' => array(
+				'label' => __( 'Company', 'woocommerce' ),
+				'show'	=> false
+				),
+			'last_name' => array(
+				'label' => __( 'Last Name', 'woocommerce' ),
+				'show'	=> false
+				),
+			'first_name' => array(
+				'label' => __( 'First Name', 'woocommerce' ),
+				'show'	=> false
+				),
+			'email' => array(
+				'label' => __( 'Email Address', 'woocommerce' ),
+				'show'	=> false
+				),
+			'phone' => array(
+				'label' => __( 'Phone', 'woocommerce' ),
+				'show'	=> false
+				),
+		);
+
+		$states = WC()->countries->get_allowed_country_states();
+		$fields['state']['options'] = array_merge($fields['state']['options'],$states['JP']);
+
+		return $fields;
+	}
+    public function admin_shipping_address_fields( $fields ) {
+		$fields=array(
+			'country' => array(
+				'label' => __( 'Country', 'woocommerce' ),
+				'show'	=> false,
+				'type'	=> 'select',
+				'options' => array( '' => __( 'Select a country&hellip;', 'woocommerce' ) ) + WC()->countries->get_shipping_countries()
+				),
+			'state' => array(
+				'label' => __( 'State/County', 'woocommerce' ),
+				'show'	=> false,
+				'type'	=> 'select',
+				'options' => array( '' => __( 'Select a state&hellip;', 'woocommerce' ) )
+				),
+			'postcode' => array(
+				'label' => __( 'Postcode', 'woocommerce' ),
+				'show'	=> false
+				),
+			'city' => array(
+				'label' => __( 'City', 'woocommerce' ),
+				'show'	=> false
+				),
+			'address_1' => array(
+				'label' => __( 'Address 1', 'woocommerce' ),
+				'show'	=> false
+				),
+			'address_2' => array(
+				'label' => __( 'Address 2', 'woocommerce' ),
+				'show'	=> false
+				),
+			'company' => array(
+				'label' => __( 'Company', 'woocommerce' ),
+				'show'	=> false
+				),
+			'first_name' => array(
+				'label' => __( 'First Name', 'woocommerce' ),
+				'show'	=> false
+				),
+			'last_name' => array(
+				'label' => __( 'Last Name', 'woocommerce' ),
+				'show'	=> false
+				),
+			'phone' => array(
+				'label' => __( 'Phone', 'woocommerce' ),
+				'show'	=> false
+				),
+		);
+		$states = WC()->countries->get_allowed_country_states();
+		$fields['state']['options'] = array_merge($fields['state']['options'],$states['JP']);
+
+		return $fields;
+	}
+
 }
