@@ -4,7 +4,7 @@ Donate link: http://wc.artws.info/
 Tags: woocommerce, ecommerce, e-commerce,
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 0.9.2
+Stable tag: 0.9.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -89,6 +89,9 @@ A: Is preparing.
 2. Admin Panel Payment Gateways
 
 == Changelog ==
+= 0.9.3 =
+bank payment bug fixed
+
 = 0.9.2 =
 Add Admin Control panel address field
 

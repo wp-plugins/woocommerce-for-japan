@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  * @class 			WC_Gateway_BANK_JP
  * @extends		WC_Payment_Gateway
- * @version		0.9.0
+ * @version		0.9.3
  * @package		WooCommerce/Classes/Payment
  * @author 		Artisan Workshop
  */
@@ -19,7 +19,7 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
      * Constructor for the gateway.
      */
     public function __construct() {
-		$this->id                 = 'bank-jp';
+		$this->id                 = 'bankjp';
 		$this->icon               = apply_filters('woocommerce_bankjp_icon', '');
 		$this->has_fields         = false;
 		$this->method_title       = __( 'BANK PAYMENT IN JAPAN', 'woocommerce-4jp' );
@@ -254,7 +254,7 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
 				), $order_id );
 
 				if ( $bankjp_account->account_name || $bankjp_account->bank_name || $bankjp_account->bank_type) {
-					echo '<h3>' . implode( ' - ', array_filter( array( $bankjp_account->bank_name, $bankjp_account->bank_type, $bankjp_account->account_name) ) ) . '</h3>' . PHP_EOL;
+					echo '<strong>' . implode( ' - ', array_filter( array( $bankjp_account->bank_name, $bankjp_account->bank_type, $bankjp_account->account_name) ) ) . '</strong>' . PHP_EOL;
 				}
 
 	    		foreach ( $account_fields as $field_key => $field ) {
