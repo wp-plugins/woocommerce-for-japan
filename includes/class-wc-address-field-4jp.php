@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: WooCommerce For Japan
- * Plugin URI: http://wordpress.org/plugins/woocommerce4jp/
+ * Plugin URI: http://wordpress.org/plugins/woocommerce-for-japan/
  * Description: Woocommerce toolkit for Japanese use.
- * Version: 0.9.2
+ * Version: 1.0.0
  * Author: Artisan Workshop
- * Author URI: http://profiles.wordpress.org/shoheitanaka
+ * Author URI: http://wc.artws.info/
  * Requires at least: 3.8
  * Tested up to: 3.9
  *
@@ -33,11 +33,6 @@ class AddressField4jp{
 	 * @return void
 	 */
 	function __construct() {
-		if(defined('ICL_SITEPRESS_VERSION')){
-			global $sitepress;
-            $current_language = $sitepress->get_current_language();
-		}
-		if(!$current_language or $current_language == 'ja'){
         // MyPage Edit And Checkout fields.
 		add_filter( 'woocommerce_default_address_fields',array( &$this,  'address_fields'));
 		add_filter( 'woocommerce_billing_fields',array( &$this,  'billing_address_fields'));
@@ -45,8 +40,6 @@ class AddressField4jp{
 		// Admin Edit Address
 		add_filter( 'woocommerce_admin_billing_fields',array( &$this,  'admin_billing_address_fields'));
 		add_filter( 'woocommerce_admin_shipping_fields',array( &$this,  'admin_shipping_address_fields'));
-		
-		}
 	}
     public function address_fields( $fields ) {
 		$fields = array(
@@ -63,6 +56,17 @@ class AddressField4jp{
 			),
 			'first_name'         => array(
 				'label'    => __( 'First Name', 'woocommerce-4jp' ),
+				'required' => true,
+				'class'    => array( 'form-row-last' ),
+				'clear'    => true
+			),
+			'yomigana_last_name'          => array(
+				'label'    => __( 'Last Name (Yomigana)', 'woocommerce-4jp' ),
+				'required' => true,
+				'class'    => array( 'form-row-first' ),
+			),
+			'yomigana_first_name'         => array(
+				'label'    => __( 'First Name (Yomigana)', 'woocommerce-4jp' ),
 				'required' => true,
 				'class'    => array( 'form-row-last' ),
 				'clear'    => true
@@ -104,6 +108,8 @@ class AddressField4jp{
 				'required'    => false
 			),
 		);
+		if(!get_option( 'wc4jp-company-name'))unset($fields['company']);
+		if(!get_option( 'wc4jp-yomigana'))unset($fields['yomigana_last_name'],$fields['yomigana_first_name']);
 		return $fields;
 	}
 		// Billing/Shipping Specific
@@ -194,6 +200,14 @@ class AddressField4jp{
 				'label' => __( 'First Name', 'woocommerce' ),
 				'show'	=> false
 				),
+			'yomigana_last_name' => array(
+				'label' => __( 'Last Name Yomigana', 'woocommerce-4jp' ),
+				'show'	=> false
+				),
+			'yomigana_first_name' => array(
+				'label' => __( 'First Name Yomigana', 'woocommerce-4jp' ),
+				'show'	=> false
+				),
 			'email' => array(
 				'label' => __( 'Email Address', 'woocommerce' ),
 				'show'	=> false
@@ -206,6 +220,9 @@ class AddressField4jp{
 
 		$states = WC()->countries->get_allowed_country_states();
 		$fields['state']['options'] = array_merge($fields['state']['options'],$states['JP']);
+
+		if(!get_option( 'wc4jp-company-name'))unset($fields['company']);
+		if(!get_option( 'wc4jp-yomigana'))unset($fields['yomigana_last_name'],$fields['yomigana_first_name']);
 
 		return $fields;
 	}
@@ -251,6 +268,14 @@ class AddressField4jp{
 				'label' => __( 'Last Name', 'woocommerce' ),
 				'show'	=> false
 				),
+			'yomigana_last_name' => array(
+				'label' => __( 'Last Name Yomigana', 'woocommerce-4jp' ),
+				'show'	=> false
+				),
+			'yomigana_first_name' => array(
+				'label' => __( 'First Name Yomigana', 'woocommerce-4jp' ),
+				'show'	=> false
+				),
 			'phone' => array(
 				'label' => __( 'Phone', 'woocommerce' ),
 				'show'	=> false
@@ -258,6 +283,9 @@ class AddressField4jp{
 		);
 		$states = WC()->countries->get_allowed_country_states();
 		$fields['state']['options'] = array_merge($fields['state']['options'],$states['JP']);
+
+		if(!get_option( 'wc4jp-company-name'))unset($fields['company']);
+		if(!get_option( 'wc4jp-yomigana'))unset($fields['yomigana_last_name'],$fields['yomigana_first_name']);
 
 		return $fields;
 	}

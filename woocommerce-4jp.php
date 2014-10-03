@@ -3,11 +3,11 @@
  * Plugin Name: WooCommerce For Japan
  * Plugin URI: http://wordpress.org/plugins/woocommerce-for-japan/
  * Description: Woocommerce toolkit for Japanese use.
- * Version: 0.9.3
+ * Version: 1.0.0
  * Author: Artisan Workshop
- * Author URI: http://profiles.wordpress.org/shoheitanaka
+ * Author URI: http://wc.artws.info/
  * Requires at least: 3.8
- * Tested up to: 3.9
+ * Tested up to: 4.0
  *
  * Text Domain: woocommerce-4jp
  * Domain Path: /i18n/
@@ -37,17 +37,22 @@ class WooCommerce4jp{
 	public function __construct() {
 		// Include required files
 		$this->includes();
-//		add_filter( 'woocommerce_default_address_fields',array( &$this,  'address_fields'));
 		$this->init();
 	}
 	/**
 	 * Include required core files used in admin and on the frontend.
 	 */
 	private function includes() {
-		// Payment Gateway
-		include_once( plugin_dir_path( __FILE__ ).'/includes/gateways/bank-jp/class-wc-gateway-bank-jp.php' );	// Bank in Japan
+		// Payment Gateway For Bank
+		if(get_option('wc4jp-bankjp')) include_once( plugin_dir_path( __FILE__ ).'/includes/gateways/bank-jp/class-wc-gateway-bank-jp.php' );	// Bank in Japan
+		// Payment Gateway For Post Office Bank
+		if(get_option('wc4jp-postofficebank')) include_once( plugin_dir_path( __FILE__ ).'/includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php' );	// Post Office Bank in Japan
+		// Payment Gateway For Post Office Bank
+		if(get_option('wc4jp-atstore')) include_once( plugin_dir_path( __FILE__ ).'/includes/gateways/atstore/class-wc-gateway-atstore-jp.php' );	// Post Office Bank in Japan
 		// Address field
 		include_once( plugin_dir_path( __FILE__ ).'/includes/class-wc-address-field-4jp.php' );
+		// Admin Setting Screen 
+		include_once( plugin_dir_path( __FILE__ ).'/includes/class-wc-admin-screen-4jp.php' );
 	}
 	/**
 	 * Init WooCommerce when WordPress Initialises.
@@ -56,8 +61,7 @@ class WooCommerce4jp{
 		// Set up localisation
 		$this->load_plugin_textdomain();
 		// Address Fields Class load
-		new AddressField4jp();
-	}
+		new AddressField4jp();}
 
 	/*
 	 * Load Localisation files.
@@ -73,6 +77,16 @@ class WooCommerce4jp{
 }
 
 endif;
+
+function wc4jp_fallback_notice() {
+	?>
+    <div class="error">
+        <ul>
+            <li><?php echo __( 'WooCommerce for Japanese is enabled but not effective. It requires WooCommerce in order to work.', 'woocommerce-4jp' );?></li>
+        </ul>
+    </div>
+    <?php
+}
 function WooCommerce4jp_plugin() {
     if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
         new WooCommerce4jp();

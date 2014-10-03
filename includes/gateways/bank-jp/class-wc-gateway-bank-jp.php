@@ -68,7 +68,7 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
 				'title'   => __( 'Enable/Disable', 'woocommerce-4jp' ),
 				'type'    => 'checkbox',
 				'label'   => __( 'Enable Bank Transfer', 'woocommerce-4jp' ),
-				'default' => 'yes'
+				'default' => 'no'
 			),
 			'title' => array(
 				'title'       => __( 'Title', 'woocommerce-4jp' ),

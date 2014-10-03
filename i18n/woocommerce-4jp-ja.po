@@ -1,12 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce For Japan v0.9.0\n"
+"Project-Id-Version: WooCommerce For Japan v1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-06-24 18:12+0900\n"
+"PO-Revision-Date: 2014-10-03 11:24+0900\n"
 "Last-Translator: Shohei Tanaka <shohei.tanaka@artisanworkshop.biz>\n"
 "Language-Team: \n"
-"Language: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,89 +16,301 @@ msgstr ""
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Textdomain-Support: yes\n"
+"Language: ja_JP\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ woocommerce-4jp
 #. translators: plugin header field 'Name'
-#: includes/class-wc-address-field-4jp.php:0 woocommerce-4jp.php:0
+#: includes/class-wc-address-field-4jp.php:0
+#: includes/class-wc-admin-screen-4jp.php:0 woocommerce-4jp.php:0
 msgid "WooCommerce For Japan"
-msgstr ""
+msgstr "WooCommerce For Japan"
+
+# @ woocommerce-4jp
+#. translators: plugin header field 'PluginURI'
+#: includes/class-wc-address-field-4jp.php:0
+#: includes/class-wc-admin-screen-4jp.php:0 woocommerce-4jp.php:0
+msgid "http://wordpress.org/plugins/woocommerce-for-japan/"
+msgstr "http://wordpress.org/plugins/woocommerce-for-japan/"
 
 # @ woocommerce-4jp
 #. translators: plugin header field 'Description'
-#: includes/class-wc-address-field-4jp.php:0 woocommerce-4jp.php:0
+#: includes/class-wc-address-field-4jp.php:0
+#: includes/class-wc-admin-screen-4jp.php:0 woocommerce-4jp.php:0
 msgid "Woocommerce toolkit for Japanese use."
 msgstr "日本国内向けのWooCommerceの標準ツールキット"
 
 # @ woocommerce-4jp
 #. translators: plugin header field 'Author'
-#: includes/class-wc-address-field-4jp.php:0 woocommerce-4jp.php:0
+#: includes/class-wc-address-field-4jp.php:0
+#: includes/class-wc-admin-screen-4jp.php:0 woocommerce-4jp.php:0
 msgid "Artisan Workshop"
 msgstr "職人工房"
 
 # @ woocommerce-4jp
-#. translators: plugin header field 'Version'
-#: includes/class-wc-address-field-4jp.php:0 woocommerce-4jp.php:0
-msgid "0.9.0"
-msgstr ""
+#. translators: plugin header field 'AuthorURI'
+#: includes/class-wc-address-field-4jp.php:0
+#: includes/class-wc-admin-screen-4jp.php:0 woocommerce-4jp.php:0
+msgid "http://wc.artws.info/"
+msgstr "http://wc.artws.info/"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:50
+#. translators: plugin header field 'Version'
+#: includes/class-wc-address-field-4jp.php:0
+#: includes/class-wc-admin-screen-4jp.php:0 woocommerce-4jp.php:0
+msgid "1.0.0"
+msgstr "1.0.0"
+
+# @ woocommerce-4jp
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:48
+#: includes/class-wc-address-field-4jp.php:164
+#: includes/class-wc-address-field-4jp.php:232
 msgid "Country"
 msgstr "国"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:55
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:53
+#: includes/class-wc-address-field-4jp.php:196
+#: includes/class-wc-address-field-4jp.php:268
 msgid "Last Name"
 msgstr "姓"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:60
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:58
+#: includes/class-wc-address-field-4jp.php:200
+#: includes/class-wc-address-field-4jp.php:264
 msgid "First Name"
 msgstr "名"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:66
+#: includes/class-wc-address-field-4jp.php:64
+msgid "Last Name (Yomigana)"
+msgstr "姓（よみがな）"
+
+# @ woocommerce-4jp
+#: includes/class-wc-address-field-4jp.php:69
+msgid "First Name (Yomigana)"
+msgstr "名（よみがな）"
+
+# @ woocommerce-4jp
+#: includes/class-wc-address-field-4jp.php:75
+#: includes/views/html-admin-setting-screen.php:15
+#: includes/views/html-admin-setting-screen.php:17
 msgid "Company Name"
 msgstr "会社名"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:70
-#: includes/class-wc-address-field-4jp.php:71
+#: includes/class-wc-address-field-4jp.php:79
+#: includes/class-wc-address-field-4jp.php:80
 msgid "Postcode / Zip"
 msgstr "郵便番号"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:78
-#: includes/class-wc-address-field-4jp.php:79
+#: includes/class-wc-address-field-4jp.php:87
+#: includes/class-wc-address-field-4jp.php:120
+#: includes/class-wc-address-field-4jp.php:146
 msgid "Prefecture"
 msgstr "都道府県"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:86
-#: includes/class-wc-address-field-4jp.php:87
+#: includes/class-wc-address-field-4jp.php:94
+#: includes/class-wc-address-field-4jp.php:95
 msgid "Town / City"
 msgstr "市区町村"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:92
+#: includes/class-wc-address-field-4jp.php:100
 msgid "Address"
 msgstr "住所詳細"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:93
+#: includes/class-wc-address-field-4jp.php:101
 msgctxt "placeholder"
 msgid "Street address"
 msgstr "丁目、番地、号など"
 
 # @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:98
+#: includes/class-wc-address-field-4jp.php:106
 msgctxt "placeholder"
 msgid "Apartment, suite, unit etc. (optional)"
 msgstr "アパート等の詳細"
 
 # @ woocommerce-4jp
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:127
+#: includes/class-wc-address-field-4jp.php:212
+msgid "Email Address"
+msgstr "メールアドレス"
+
+# @ woocommerce-4jp
+#: includes/class-wc-address-field-4jp.php:133
+msgid "Billing Phone"
+msgstr "請求先電話番号"
+
+# @ woocommerce-4jp
+#: includes/class-wc-address-field-4jp.php:153
+msgid "Shipping Phone"
+msgstr "送付先電話番号"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:167
+#: includes/class-wc-address-field-4jp.php:235
+msgid "Select a country&hellip;"
+msgstr "国を選ぶ&hellip;"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:170
+#: includes/class-wc-address-field-4jp.php:238
+msgid "State/County"
+msgstr "州"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:173
+#: includes/class-wc-address-field-4jp.php:241
+msgid "Select a state&hellip;"
+msgstr "州を選ぶ"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:176
+#: includes/class-wc-address-field-4jp.php:244
+msgid "Postcode"
+msgstr "ポストコード"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:180
+#: includes/class-wc-address-field-4jp.php:248
+msgid "City"
+msgstr "市"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:184
+#: includes/class-wc-address-field-4jp.php:252
+msgid "Address 1"
+msgstr "住所詳細１"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:188
+#: includes/class-wc-address-field-4jp.php:256
+msgid "Address 2"
+msgstr "住所詳細２"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:192
+#: includes/class-wc-address-field-4jp.php:260
+msgid "Company"
+msgstr "会社名"
+
+# @ woocommerce-4jp
+#: includes/class-wc-address-field-4jp.php:204
+#: includes/class-wc-address-field-4jp.php:272
+msgid "Last Name Yomigana"
+msgstr "姓（よみがな）"
+
+# @ woocommerce-4jp
+#: includes/class-wc-address-field-4jp.php:208
+#: includes/class-wc-address-field-4jp.php:276
+msgid "First Name Yomigana"
+msgstr "名（よみがな）"
+
+# @ woocommerce
+#: includes/class-wc-address-field-4jp.php:216
+#: includes/class-wc-address-field-4jp.php:280
+msgid "Phone"
+msgstr "電話番号"
+
+# @ woocommerce-4jp
+#: includes/class-wc-admin-screen-4jp.php:37
+msgid "For Japanese"
+msgstr "日本対応"
+
+# @ woocommerce
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:25
+msgid "Pay At Store"
+msgstr "店頭払い"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:26
+msgid "Allows At Store payments."
+msgstr "店頭での支払いを使います"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:52
+#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:68
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:66
+msgid "Enable/Disable"
+msgstr "有効"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:54
+msgid "Enable At Store Payment"
+msgstr "店頭支払いを利用する"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:58
+#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:74
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:72
+msgid "Title"
+msgstr "タイトル"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:60
+#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:76
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:74
+msgid "This controls the title which the user sees during checkout."
+msgstr "支払い時に購入者が見る支払いのタイトルです"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:61
+msgid "At Store Payment"
+msgstr "店頭支払い"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:65
+#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:81
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:79
+msgid "Description"
+msgstr "説明"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:67
+#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:83
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:81
+msgid "Payment method description that the customer will see on your checkout."
+msgstr "支払い時に購入者が見る支払い方法の説明です。"
+
+# @ woocommerce-4jp
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:68
+msgid "Please pay the fee at Store."
+msgstr "お店で代金をお支払い下さい。"
+
+# @ woocommerce-4jp
+# @ woocommerce
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:72
+#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:88
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:86
+msgid "Instructions"
+msgstr "説明書き"
+
+# @ woocommerce-4jp
+# @ woocommerce
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:74
+#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:90
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:88
+msgid "Instructions that will be added to the thank you page and emails."
+msgstr "サンクスページやメールの案内で使われる説明書きです。"
+
+# @ woocommerce
+#: includes/gateways/atstore/class-wc-gateway-atstore-jp.php:114
+msgid "Awaiting At Store payment"
+msgstr "店頭払い待ち"
+
+# @ woocommerce-4jp
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:25
+#: includes/views/html-admin-setting-screen.php:25
+#: includes/views/html-admin-setting-screen.php:27
 msgid "BANK PAYMENT IN JAPAN"
 msgstr "銀行振込（日本向け）"
 
@@ -109,24 +320,9 @@ msgid "Allows payments by bank transfer in Japan."
 msgstr "日本の銀行向けの日本国内での銀行振込での支払いを許可する。"
 
 # @ woocommerce-4jp
-#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:68
-msgid "Enable/Disable"
-msgstr "銀行振込を有効"
-
-# @ woocommerce-4jp
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:70
 msgid "Enable Bank Transfer"
 msgstr "銀行振込（日本国内向け）を利用する"
-
-# @ woocommerce-4jp
-#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:74
-msgid "Title"
-msgstr "タイトル"
-
-# @ woocommerce-4jp
-#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:76
-msgid "This controls the title which the user sees during checkout."
-msgstr "支払い時に購入者が見る支払いのタイトルです"
 
 # @ woocommerce-4jp
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:77
@@ -134,29 +330,9 @@ msgid "Bank Transfer in Japan"
 msgstr "銀行振込（日本国内）"
 
 # @ woocommerce-4jp
-#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:81
-msgid "Description"
-msgstr "説明"
-
-# @ woocommerce-4jp
-#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:83
-msgid "Payment method description that the customer will see on your checkout."
-msgstr "支払い時に購入者が見る支払い方法の説明です。"
-
-# @ woocommerce-4jp
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:84
 msgid "Make your payment directly into our bank account."
 msgstr "銀行口座に直接振り込んで頂きます。"
-
-# @ woocommerce
-#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:88
-msgid "Instructions"
-msgstr "説明書き"
-
-# @ woocommerce
-#: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:90
-msgid "Instructions that will be added to the thank you page and emails."
-msgstr "サンクスページやメールの案内で使われる説明書きです。"
 
 # @ woocommerce-4jp
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:107
@@ -181,23 +357,28 @@ msgstr "口座種別"
 # @ woocommerce-4jp
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:116
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:251
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:112
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:239
 msgid "Account Number"
 msgstr "口座番号"
 
 # @ woocommerce-4jp
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:117
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:113
 msgid "Account Name"
 msgstr "口座名義"
 
 # @ woocommerce
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:122
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:118
 msgid "+ Add Account"
-msgstr "振込用銀行口座を追加"
+msgstr "口座を追加"
 
 # @ woocommerce
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:122
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:118
 msgid "Remove selected account(s)"
-msgstr "選択した銀行口座を削除"
+msgstr "選択した口座を削除"
 
 # @ woocommerce-4jp
 #: includes/gateways/bank-jp/class-wc-gateway-bank-jp.php:238
@@ -210,28 +391,123 @@ msgid "Awaiting BANK payment"
 msgstr "銀行振込入金待ち"
 
 # @ woocommerce-4jp
-#. translators: plugin header field 'PluginURI'
-#: includes/class-wc-address-field-4jp.php:0 woocommerce-4jp.php:0
-msgid "http://wordpress.org/plugins/woocommerce4jp/"
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:25
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:75
+#: includes/views/html-admin-setting-screen.php:32
+#: includes/views/html-admin-setting-screen.php:34
+msgid "Postal transfer"
+msgstr "郵便振替"
+
+# @ woocommerce-4jp
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:26
+msgid "Allows payments by Postal transfer in Japan."
+msgstr "郵便振替での支払いを許可する。"
+
+# @ woocommerce-4jp
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:68
+msgid "Enable Postal transfer"
+msgstr "郵便振替を利用する"
+
+# @ woocommerce-4jp
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:82
+msgid "Make your payment directly into our Post Office Bank account."
+msgstr "ゆうちょ口座に直接振り込んで頂きます。"
+
+# @ woocommerce-4jp
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:105
+msgid "Post Office Account Details"
+msgstr "ゆうちょ口座詳細"
+
+# @ woocommerce-4jp
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:111
+msgid "Bank Symbol"
+msgstr "記号"
+
+# @ woocommerce-4jp
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:226
+msgid "Our Post Office Bank Details"
+msgstr "ゆうちょ口座詳細"
+
+# @ woocommerce-4jp
+#: includes/gateways/postofficebank/class-wc-gateway-postofficebank-jp.php:270
+msgid "Awaiting Post Office BANK payment"
+msgstr "郵便振替入金待ち"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-info-screen.php:1
+msgid "Infomation of Japanese Support"
+msgstr "日本のサポート情報"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-screen.php:3
+msgid "Setting"
+msgstr "設定"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-screen.php:3
+msgid "Infomations"
+msgstr "関連情報"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:4
+msgid "Address Display Setting"
+msgstr "顧客入力項目設定"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:8
+#: includes/views/html-admin-setting-screen.php:10
+msgid "Name Yomigana"
+msgstr "名前（よみがな）"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:11
+msgid "Please check it if you want to use input field for Yomigana of Name"
+msgstr "もし、氏名によみがなを利用したい場合はチェックしてください。"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:18
+msgid "Please check it if you want to use input field for Company Name"
+msgstr "もし、会社名を利用したい場合はチェックしてください。"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:21
+msgid "Payment Method"
+msgstr "追加支払い方法"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:28
+msgid ""
+"Please check it if you want to use the payment method of BANK PAYMENT IN "
+"JAPAN"
+msgstr "もし、銀行振込（日本向け）を利用したい場合はチェックをしてください。"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:35
+msgid ""
+"Please check it if you want to use the payment method of Postal transfer"
+msgstr "もし、郵便振替を利用したい場合はチェックをしてください。"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:39
+#: includes/views/html-admin-setting-screen.php:41
+msgid "Pay at store"
+msgstr "店頭支払い"
+
+# @ woocommerce-4jp
+#: includes/views/html-admin-setting-screen.php:42
+msgid "Please check it if you want to use the payment method of Pay at store"
+msgstr "もし、店頭支払いを利用したい場合はチェックをしてください。"
+
+# @ woocommerce
+#: includes/views/html-admin-setting-screen.php:46
+msgid "Save changes"
+msgstr "変更を保存"
+
+# @ woocommerce-4jp
+#: woocommerce-4jp.php:85
+msgid ""
+"WooCommerce for Japanese is enabled but not effective. It requires "
+"WooCommerce in order to work."
 msgstr ""
-
-# @ woocommerce-4jp
-#. translators: plugin header field 'AuthorURI'
-#: includes/class-wc-address-field-4jp.php:0 woocommerce-4jp.php:0
-msgid "http://profiles.wordpress.org/shoheitanaka"
-msgstr ""
-
-# @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:110
-msgid "Email Address"
-msgstr "メールアドレス"
-
-# @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:116
-msgid "Billing Phone"
-msgstr "請求先電話番号"
-
-# @ woocommerce-4jp
-#: includes/class-wc-address-field-4jp.php:128
-msgid "Shipping Phone"
-msgstr "配送先電話番号"
+"WooCommerce for Japaneseは利用可能ですが、動いておりません。WooCommerceをイン"
+"ストールして、アクティブにする必要があります。"

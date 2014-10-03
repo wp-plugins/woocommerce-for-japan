@@ -1,10 +1,10 @@
 === WooCommerce For Japan ===
 Contributors: shohei.tanaka
 Donate link: http://wc.artws.info/
-Tags: woocommerce, ecommerce, e-commerce,
+Tags: woocommerce, ecommerce, e-commerce, Japanese
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 0.9.3
+Stable tag: 1.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,10 +18,13 @@ This plugin extends the WooCommerce shop plugin for Japanese situation.
 
 基本的に以下の対応を行っております。<br />
 1. 住所の入力項目の並び順の変更<br />
-2. 支払い方法の銀行振込の日本表記への変更<br />
-3. 管理画面での住所の入力項目の並び順の変更<br />
+2. 氏名のよみがな入力項目の追加や削除<br />
+3. 会社名の入力項目の追加や削除<br />
+4. 支払い方法の銀行振込の日本表記の変更と郵便振替・店頭払いの追加<br />
+5. 管理画面での住所の入力項目の並び順の変更<br /><br />
+※上記設定を「日本語」設定タブから設定が必要です。
 
-今後、順次最低限必要と思われる機能をプラスしていきます。<br />
+今後も順次最低限必要と思われる機能をプラスしていきます。<br />
 その他の機能に関しては、別の追加プラグインとして追加していく予定です。<br />
 ※このプラグインはWooCommerceの日本語レビュアーによって作成されています。
 
@@ -31,8 +34,10 @@ This plugin extends the WooCommerce shop plugin for minimum necessary features i
 = Key Features =
 
 1. Change the order of Address input fields for Japan. 
-2. Add Payment Method for Bank transfer for Japanese situation.
-3. Change the order of Address input fields for Japan in Admin Control panel. 
+2. Add and delete the field of name yomigana for Japan. 
+3. Add and delete the field of company name.
+4. Add and delete the field of company name.
+5. Change the order of Address input fields for Japan in Admin Control panel. 
 ※This plugin is made by the WooCommerce Japanese reviewer.
 
 == Installation ==
@@ -81,14 +86,22 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 = In English: =
 
 Q: Do you have the forum of this plugin in Japanese?<br />
-A: Is preparing.
+A: Here<br />
+http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 
 == Screenshots ==
 
 1. Billing Address Input Form
 2. Admin Panel Payment Gateways
+3. Admin Panel WooCommerce for Japan Setting Screen.
 
 == Changelog ==
+= 1.0.0 =
+Add and delete name yomigana fields.
+Add and delete company name.
+Add payment method of Postal transfer and Pay at store.
+some bugs fixed
+
 = 0.9.3 =
 bank payment bug fixed
 
