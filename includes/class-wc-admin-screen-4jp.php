@@ -27,7 +27,6 @@ class WC_4JP_Admin_Screen {
 	 */
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'wc4jp_admin_menu' ) );
-		add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 		add_action( 'admin_init', array( $this, 'wc4jp_setting_init') );
 	}
 	/**
