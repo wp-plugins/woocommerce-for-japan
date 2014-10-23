@@ -96,13 +96,13 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 
 == Changelog ==
 = 1.0.1 =
-Display Yomigana Fields at My Account page and Check out Page and E-mail and Admin 
+Display Yomigana Fields at My Account page and Check out Page and E-mail and Admin<br />
 Some bugs fixed
 
 = 1.0.0 =
-Add and delete name yomigana fields.
-Add and delete company name.
-Add payment method of Postal transfer and Pay at store.
+Add and delete name yomigana fields.<br />
+Add and delete company name.<br />
+Add payment method of Postal transfer and Pay at store.<br />
 some bugs fixed
 
 = 0.9.3 =
