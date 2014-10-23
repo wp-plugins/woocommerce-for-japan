@@ -1,10 +1,9 @@
 === WooCommerce For Japan ===
 Contributors: shohei.tanaka
-Donate link: http://wc.artws.info/
 Tags: woocommerce, ecommerce, e-commerce, Japanese
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -96,6 +95,10 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 3. Admin Panel WooCommerce for Japan Setting Screen.
 
 == Changelog ==
+= 1.0.1 =
+Display Yomigana Fields at My Account page and Check out Page and E-mail and Admin 
+Some bugs fixed
+
 = 1.0.0 =
 Add and delete name yomigana fields.
 Add and delete company name.
