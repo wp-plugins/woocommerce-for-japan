@@ -1,0 +1,8 @@
+/* CSS Document */
+#order_data .order_data_column ._billing_yomigana_last_name_field, #order_data .order_data_column ._shipping_yomigana_last_name_field,#order_data .order_data_column ._billing_last_name_field, #order_data .order_data_column ._shipping_last_name_field{
+float: left;
+}
+#order_data .order_data_column ._billing_yomigana_first_name_field, #order_data .order_data_column ._shipping_yomigana_first_name_field,#order_data .order_data_column ._billing_first_name_field, #order_data .order_data_column ._shipping_first_name_field{
+
+float: right;
+}
