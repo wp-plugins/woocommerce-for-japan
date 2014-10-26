@@ -3,7 +3,7 @@ Contributors: shohei.tanaka
 Tags: woocommerce, ecommerce, e-commerce, Japanese
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,8 +20,9 @@ This plugin extends the WooCommerce shop plugin for Japanese situation.
 2. 氏名のよみがな入力項目の追加や削除<br />
 3. 会社名の入力項目の追加や削除<br />
 4. 支払い方法の銀行振込の日本表記の変更と郵便振替・店頭払いの追加<br />
-5. 管理画面での住所の入力項目の並び順の変更<br /><br />
-※上記設定を「日本語」設定タブから設定が必要です。
+5. 管理画面での住所の入力項目の並び順の変更<br />
+※上記設定を「日本語」設定タブから設定が必要です。<br />
+6.代引きに手数料設定ができるようにしました。<br /><br />
 
 今後も順次最低限必要と思われる機能をプラスしていきます。<br />
 その他の機能に関しては、別の追加プラグインとして追加していく予定です。<br />
@@ -38,6 +39,7 @@ This plugin extends the WooCommerce shop plugin for minimum necessary features i
 4. Add and delete the field of company name.
 5. Change the order of Address input fields for Japan in Admin Control panel. 
 ※This plugin is made by the WooCommerce Japanese reviewer.
+6. Add the field of Extra fee for COD.
 
 == Installation ==
 
@@ -95,6 +97,9 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 3. Admin Panel WooCommerce for Japan Setting Screen.
 
 == Changelog ==
+= 1.0.2 =
+Add Extra fee for COD.
+
 = 1.0.1 =
 Display Yomigana Fields at My Account page and Check out Page and E-mail and Admin<br />
 Some bugs fixed
