@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce For Japan
  * Plugin URI: http://wordpress.org/plugins/woocommerce-for-japan/
  * Description: Woocommerce toolkit for Japanese use.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Artisan Workshop
  * Author URI: http://wc.artws.info/
  * Requires at least: 3.8
@@ -53,6 +53,9 @@ class WooCommerce4jp{
 		include_once( plugin_dir_path( __FILE__ ).'/includes/class-wc-address-field-4jp.php' );
 		// Admin Setting Screen 
 		include_once( plugin_dir_path( __FILE__ ).'/includes/class-wc-admin-screen-4jp.php' );
+		// ADD COD Fee 
+		include_once( plugin_dir_path( __FILE__ ).'/includes/class-wc-cod-fee-4jp.php' );
+		new WooCommerce_Cod_Fee();
 	}
 	/**
 	 * Init WooCommerce when WordPress Initialises.
