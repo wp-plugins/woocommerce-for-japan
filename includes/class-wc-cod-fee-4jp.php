@@ -73,7 +73,7 @@ class WooCommerce_Cod_Fee {
         $this->plugin_path                          = $this->plugin_path();
         $this->current_gateway                      = null;
         $this->current_extra_charge_amount          = 0;
-        $this->current_extra_charge_min_cart_value  = 0;
+        $this->current_extra_charge_max_cart_value  = 0;
 
         //Hooks & Filters
         add_action( 'woocommerce_cart_calculate_fees',          array( $this, 'calculate_order_totals' ) );
@@ -104,7 +104,7 @@ class WooCommerce_Cod_Fee {
         $current_section    = !isset( $_GET['section'] ) || empty( $_GET['section'] ) ? '' : sanitize_text_field( urldecode( $_GET['section'] ) );
         $current_gateway    = 'cod';
         $charge_amount      = 0;
-        $min_cart_value     = 0;
+        $max_cart_value     = 0;
 
         if( $current_tab == 'checkout' && !empty( $current_section ) ) {
             $html = $this->manage_form_fields_for_basic_gateways( $current_gateway );
@@ -125,13 +125,13 @@ class WooCommerce_Cod_Fee {
         if( isset( $_REQUEST['save'] ) ) {
             update_option( $this->get_option_id( $current_gateway, 'name' ), $_REQUEST[ $this->get_option_id( $current_gateway, 'name' ) ] );
             update_option( $this->get_option_id( $current_gateway, 'amount' ), $_REQUEST[ $this->get_option_id( $current_gateway, 'amount' ) ] );
-            update_option( $this->get_option_id( $current_gateway, 'min_cart_value' ), $_REQUEST[ $this->get_option_id( $current_gateway, 'min_cart_value' ) ] );
+            update_option( $this->get_option_id( $current_gateway, 'max_cart_value' ), $_REQUEST[ $this->get_option_id( $current_gateway, 'max_cart_value' ) ] );
             update_option( $this->get_option_id( $current_gateway, 'calc_taxes' ), $_REQUEST[ $this->get_option_id( $current_gateway, 'calc_taxes' ) ] );
         }
 
         $fee_name       = get_option( $this->get_option_id( $current_gateway, 'name' ) );
         $charge_amount  = get_option( $this->get_option_id( $current_gateway, 'amount' ) );
-        $min_cart_value = get_option( $this->get_option_id( $current_gateway, 'min_cart_value' ) );
+        $max_cart_value = get_option( $this->get_option_id( $current_gateway, 'max_cart_value' ) );
         $calc_taxes     = get_option( $this->get_option_id( $current_gateway, 'calc_taxes' ) );
 
         ob_start() ?>
@@ -157,11 +157,11 @@ class WooCommerce_Cod_Fee {
                     </td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row" class="titledesc"><label for="woocommerce_cod_extra_charge_min_cart_value"><?php _e( 'Maximum cart value to which adding fee', 'woocommerce-4jp' ) ?></label></th>
+                    <th scope="row" class="titledesc"><label for="woocommerce_cod_extra_charge_max_cart_value"><?php _e( 'Maximum cart value to which adding fee', 'woocommerce-4jp' ) ?></label></th>
                     <td class="forminp">
                         <fieldset>
                             <legend class="screen-reader-text"><span><?php _e( 'Maximum cart value for adding fee', 'woocommerce-4jp' ) ?></span></legend>
-                            <input class="input-text regular-input " type="number" name="woocommerce_cod_extra_charge_min_cart_value" id="woocommerce_cod_extra_charge_min_cart_value" style="width:70px" value="<?php echo $min_cart_value ?>" placeholder="0" min="0" step="1">
+                            <input class="input-text regular-input " type="number" name="woocommerce_cod_extra_charge_max_cart_value" id="woocommerce_cod_extra_charge_max_cart_value" style="width:70px" value="<?php echo $max_cart_value ?>" placeholder="0" min="0" step="1">
                             <p><?php _e( 'If you dont need this setting, please set empty, 0.', 'woocommerce-4jp' ) ?></p>
                         </fieldset>
                     </td>
@@ -211,10 +211,10 @@ class WooCommerce_Cod_Fee {
         }
 
         $this->current_gateway          = $current_gateway; //Note: this is an object
-        $extra_charge_min_cart_value    = get_option( $this->get_option_id( $current_gateway->id, 'min_cart_value' ) );
+        $extra_charge_max_cart_value    = get_option( $this->get_option_id( $current_gateway->id, 'max_cart_value' ) );
 
         //Add charges to cart totals
-        if( !empty( $current_gateway ) && ( empty( $extra_charge_min_cart_value ) || $extra_charge_min_cart_value >= $subtotal ) ) {
+        if( !empty( $current_gateway ) && ( empty( $extra_charge_max_cart_value ) || $extra_charge_max_cart_value >= $subtotal ) ) {
 
             $extra_charge_name              = get_option( $this->get_option_id( $current_gateway->id, 'name' ) );
             $extra_charge_amount            = get_option( $this->get_option_id( $current_gateway->id, 'amount' ) );

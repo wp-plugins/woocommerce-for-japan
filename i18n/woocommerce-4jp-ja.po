@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce For Japan v1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-10-03 11:24+0900\n"
+"PO-Revision-Date: 2014-10-27 06:37+0900\n"
 "Last-Translator: Shohei Tanaka <shohei.tanaka@artisanworkshop.biz>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -511,3 +511,53 @@ msgid ""
 msgstr ""
 "WooCommerce for Japaneseは利用可能ですが、動いておりません。WooCommerceをイン"
 "ストールして、アクティブにする必要があります。"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "Extra charge for COD method"
+msgstr "代引き手数料設定"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "Fee name"
+msgstr "手数料表記名"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "COD Payment method fee"
+msgstr "代引き手数料"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "Extra charge amount"
+msgstr "手数料金額"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "Maximum cart value to which adding fee"
+msgstr "手数料無料設定金額"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "If you dont need this setting, please set empty, 0."
+msgstr "もし、無料設定が必要でない場合は、0に設定してください。"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "Includes taxes"
+msgstr "手数料の消費税処理"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "Do not calculate taxes"
+msgstr "非課税"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "The fee is taxes included"
+msgstr "税込"
+
+# @ woocommerce-4jp
+#: includes/class-wc-cod-fee-4jp.php:138
+msgid "The fee is taxes excluded"
+msgstr "税抜き"
