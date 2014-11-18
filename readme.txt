@@ -1,5 +1,5 @@
 === WooCommerce For Japan ===
-Contributors: shohei.tanaka
+Contributors: shohei.tanaka, artisan-workshop-1, mt8biz, ibridge_jp
 Tags: woocommerce, ecommerce, e-commerce, Japanese
 Requires at least: 3.8
 Tested up to: 4.0
