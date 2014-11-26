@@ -3,7 +3,7 @@ Contributors: artisan-workshop-1, shohei.tanaka, mt8biz, ibridge_jp
 Tags: woocommerce, ecommerce, e-commerce, Japanese
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -97,6 +97,9 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 3. Admin Panel WooCommerce for Japan Setting Screen.
 
 == Changelog ==
+= 1.0.4 =
+Bug Fix
+
 = 1.0.3 =
 Bug Fix
 

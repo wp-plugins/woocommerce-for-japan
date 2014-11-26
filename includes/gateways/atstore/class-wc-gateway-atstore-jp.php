@@ -22,7 +22,7 @@ class WC_Gateway_AtStore_JP extends WC_Payment_Gateway {
 		$this->id                 = 'atstore';
 //		$this->icon               = apply_filters('woocommerce_cheque_icon', '');
 		$this->has_fields         = false;
-		$this->method_title       = __( 'Pay At Store', 'woocommerce' );
+		$this->method_title       = __( 'Pay At Store', 'woocommerce-4jp' );
 		$this->method_description = __( 'Allows At Store payments.', 'woocommerce-4jp' );
 
 		// Load the settings.
