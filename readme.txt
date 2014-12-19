@@ -3,8 +3,8 @@ Contributors: artisan-workshop-1, shohei.tanaka, mt8biz, ibridge_jp
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@artws.info&item_name=Donation+for+Artisan&currency_code=JPY
 Tags: woocommerce, ecommerce, e-commerce, Japanese
 Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 1.0.4
+Tested up to: 4.0.1
+Stable tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -98,9 +98,10 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 3. Admin Panel WooCommerce for Japan Setting Screen.
 
 == Changelog ==
-= 1.0.4 =
-Bug Fix
+= 1.0.5 =
+Bug Fix and Uninstall setting
 
+= 1.0.4 =
 = 1.0.3 =
 Bug Fix
 
