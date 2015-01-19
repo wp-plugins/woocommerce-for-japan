@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce For Japan
  * Plugin URI: http://wordpress.org/plugins/woocommerce-for-japan/
  * Description: Woocommerce toolkit for Japanese use.
- * Version: 1.0.0
+ * Version: 1.0.6
  * Author: Artisan Workshop
  * Author URI: http://wc.artws.info/
  * Requires at least: 3.8
@@ -62,33 +62,27 @@ class WC_4JP_Admin_Screen {
 		if( isset( $_POST['wc4jp-setting'] ) ){
 			if( check_admin_referer( 'my-nonce-key', 'wc4jp-setting')){
 				//yomigana
-				if(isset($_POST['yomigana'])){
+				if(isset($_POST['yomigana']) && $_POST['yomigana']){
 					update_option( 'wc4jp-yomigana', $_POST['yomigana']);
 				}else{
-					if(!get_option('wc4jp-yomigana')){
-						update_option( 'wc4jp-yomigana', '');
-					}
+					update_option( 'wc4jp-yomigana', '');
 				}
 				//company-name
-				if(isset($_POST['company-name'])){
+				if(isset($_POST['company-name']) && $_POST['company-name']){
 					update_option( 'wc4jp-company-name', $_POST['company-name']);
 				}else{
-					if(!get_option('wc4jp-company-name')){
-						update_option( 'wc4jp-company-name', '');
-					}
+					update_option( 'wc4jp-company-name', '');
 				}
 				//bankjp payment method
 					$woocommerce_bankjp_settings = get_option('woocommerce_bankjp_settings');
-				if(isset($_POST['bankjp'])){
+				if(isset($_POST['bankjp']) && $_POST['bankjp']){
 					update_option( 'wc4jp-bankjp', $_POST['bankjp']);
 					if(isset($woocommerce_bankjp_settings)){
 						$woocommerce_bankjp_settings['enabled'] = 'yes';
 						update_option( 'woocommerce_bankjp_settings', $woocommerce_bankjp_settings);
 					}
 				}else{
-					if(!get_option('wc4jp-bankjp')){
-						update_option( 'wc4jp-bankjp', '');
-					}
+					update_option( 'wc4jp-bankjp', '');
 					if(isset($woocommerce_bankjp_settings)){
 						$woocommerce_bankjp_settings['enabled'] = 'no';
 						update_option( 'woocommerce_bankjp_settings', $woocommerce_bankjp_settings);
@@ -103,21 +97,17 @@ class WC_4JP_Admin_Screen {
 						update_option( 'woocommerce_postofficebankjp_settings', $woocommerce_postofficebankjp_settings);
 					}
 				}else{
-					if(!get_option('wc4jp-postofficebank')){
-						update_option( 'wc4jp-postofficebank', '');
-					}
+					update_option( 'wc4jp-postofficebank', '');
 					if(isset($woocommerce_postofficebankjp_settings)){
 						$woocommerce_postofficebankjp_settings['enabled'] = 'no';
 						update_option( 'woocommerce_postofficebankjp_settings', $woocommerce_postofficebankjp_settings);
 					}
 				}
 				//At Store payment method
-				if(isset($_POST['atstore'])){
+				if(isset($_POST['atstore']) && $_POST['atstore']){
 					update_option( 'wc4jp-atstore', $_POST['atstore']);
 				}else{
-					if(!get_option('wc4jp-atstore')){
-						update_option( 'wc4jp-atstore', '');
-					}
+					update_option( 'wc4jp-atstore', '');
 				}
 			}
 		}

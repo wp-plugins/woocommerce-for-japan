@@ -80,7 +80,7 @@ class WooCommerce_Cod_Fee {
         add_action( 'wp_enqueue_scripts' ,                      array( $this, 'enqueue_scripts_frontend' ) );
 
         if( is_admin() ) {
-			if($_GET['section']=='wc_gateway_cod'){
+			if(isset($_GET['section']) and $_GET['section']=='wc_gateway_cod'){
             add_action( 'admin_head',                           array( $this, 'manage_form_fields' ) );
 			}
         }
