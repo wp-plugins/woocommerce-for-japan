@@ -98,6 +98,9 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 3. Admin Panel WooCommerce for Japan Setting Screen.
 
 == Changelog ==
+= 1.0.7 =
+Bug Fix BankPayment branch name
+
 = 1.0.6 =
 Bug Fix
 

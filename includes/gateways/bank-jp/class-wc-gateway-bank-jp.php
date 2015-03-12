@@ -254,7 +254,7 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
 				), $order_id );
 
 				if ( $bankjp_account->account_name || $bankjp_account->bank_name || $bankjp_account->bank_type) {
-					echo '<strong>' . implode( ' - ', array_filter( array( $bankjp_account->bank_name, $bankjp_account->bank_type, $bankjp_account->account_name) ) ) . '</strong>' . PHP_EOL;
+					echo '<strong>' . implode( ' - ', array_filter( array( $bankjp_account->bank_name, $bankjp_account->bank_branch,$bankjp_account->bank_type, $bankjp_account->account_name) ) ) . '</strong>' . PHP_EOL;
 				}
 
 	    		foreach ( $account_fields as $field_key => $field ) {
