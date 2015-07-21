@@ -100,7 +100,7 @@ function wc4jp_fallback_notice() {
     <?php
 }
 function WooCommerce4jp_plugin() {
-    if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || is_plugin_active_for_network( 'woocommerce/woocommerce.php' ) ) {
+    if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
         new WooCommerce4jp();
     } else {
         add_action( 'admin_notices', 'wc4jp_fallback_notice' );
