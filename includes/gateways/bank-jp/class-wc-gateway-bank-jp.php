@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  * @class 			WC_Gateway_BANK_JP
  * @extends		WC_Payment_Gateway
- * @version		0.9.3
+ * @version		1.0.8
  * @package		WooCommerce/Classes/Payment
  * @author 		Artisan Workshop
  */
@@ -53,10 +53,10 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
 		// Actions
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'save_account_details' ) );
-	    	add_action( 'woocommerce_thankyou_bankjp', array( $this, 'thankyou_page' ) );
+	    add_action( 'woocommerce_thankyou_bankjp', array( $this, 'thankyou_page' ) );
 
-	    	// Customer Emails
-	    	add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 3 );
+	    // Customer Emails
+	    add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 3 );
     }
 
     /**
@@ -191,7 +191,7 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
 				'bank_branch'      => $bank_branches[ $i ],
 				'bank_type'      => $bank_types[ $i ],
 				'account_number' => $account_numbers[ $i ],
-	    			'account_name'   => $account_names[ $i ],
+	    		'account_name'   => $account_names[ $i ],
 	    		);
 	    	}
     	}
@@ -219,7 +219,7 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
      * @return void
      */
     public function email_instructions( $order, $sent_to_admin, $plain_text = false ) {
-    	if ( ! $sent_to_admin && 'bankjp' === $order->payment_method && 'on-hold' === $order->status ) {
+    	if ( $this->instructions && ! $sent_to_admin && 'bankjp' === $order->payment_method && ('on-hold' === $order->status || 'pending' === $order->status )) {
 			if ( $this->instructions ) {
 				echo wpautop( wptexturize( $this->instructions ) ) . PHP_EOL;
 			}
@@ -278,8 +278,8 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
 
 		$order = new WC_Order( $order_id );
 
-		// Mark as on-hold (we're awaiting the payment)
-		$order->update_status( 'on-hold', __( 'Awaiting BANK payment', 'woocommerce-4jp' ) );
+		// Mark as pending (we're awaiting[pending] the payment)
+		$order->update_status( 'pending', __( 'Awaiting BANK payment', 'woocommerce-4jp' ) );
 
 		// Reduce stock levels
 		$order->reduce_order_stock();

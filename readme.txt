@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@art
 Tags: woocommerce, ecommerce, e-commerce, Japanese
 Requires at least: 3.8
 Tested up to: 4.0.1
-Stable tag: 1.0.6
+Stable tag: 1.0.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -98,6 +98,9 @@ http://support.artws.info/forums/forum/woocommerce-for-japan-plugins-forum/
 3. Admin Panel WooCommerce for Japan Setting Screen.
 
 == Changelog ==
+= 1.0.7 =
+Bug Fix BankPayment and multi_site notice
+
 = 1.0.7 =
 Bug Fix BankPayment branch name
 

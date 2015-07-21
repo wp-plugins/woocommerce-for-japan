@@ -3,11 +3,11 @@
  * Plugin Name: WooCommerce For Japan
  * Plugin URI: http://wordpress.org/plugins/woocommerce-for-japan/
  * Description: Woocommerce toolkit for Japanese use.
- * Version: 1.0.7
+ * Version: 1.0.8
  * Author: Artisan Workshop
  * Author URI: http://wc.artws.info/
  * Requires at least: 3.8
- * Tested up to: 4.1
+ * Tested up to: 4.2
  *
  * Text Domain: woocommerce-4jp
  * Domain Path: /i18n/
@@ -38,6 +38,8 @@ class WooCommerce4jp{
 		// Include required files
 		$this->includes();
 		$this->init();
+		// change paypal bn for japan
+		add_filter( 'woocommerce_paypal_args',array( &$this,  'wc4jp_paypal_bn'));
 	}
 	/**
 	 * Include required core files used in admin and on the frontend.
@@ -64,8 +66,8 @@ class WooCommerce4jp{
 		// Set up localisation
 		$this->load_plugin_textdomain();
 		// Address Fields Class load
-		new AddressField4jp();}
-
+		new AddressField4jp();
+	}
 	/*
 	 * Load Localisation files.
 	 *
@@ -75,6 +77,13 @@ class WooCommerce4jp{
 		$locale = apply_filters( 'plugin_locale', get_locale(), 'woocommerce-4jp' );
 		// Global + Frontend Locale
 		load_plugin_textdomain( 'woocommerce-4jp', false, plugin_basename( dirname( __FILE__ ) ) . "/i18n" );
+	}
+	/**
+	 * Init WooCommerce when WordPress Initialises.
+	 */
+	public function wc4jp_paypal_bn( $fields, $order) {
+		$fields['bn'] = 'ArtisanWorkshop_Cart_WPS_JP';
+		return $fields;
 	}
 
 }
@@ -91,7 +100,7 @@ function wc4jp_fallback_notice() {
     <?php
 }
 function WooCommerce4jp_plugin() {
-    if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+    if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) && is_plugin_active_for_network( 'woocommerce/woocommerce.php' ) ) {
         new WooCommerce4jp();
     } else {
         add_action( 'admin_notices', 'wc4jp_fallback_notice' );

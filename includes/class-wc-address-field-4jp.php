@@ -101,8 +101,8 @@ function load_custom_wc4jp_admin_style() {
 				'label'       => __( 'Prefecture', 'woocommerce-4jp' ),
 				'required'    => true,
 				'class'       => array( 'form-row-last', 'address-field' ),
-				'clear'       => true,
-				'validate'    => array( 'state' )
+				'validate'    => array( 'state' ),
+				'clear'       => true
 			),
 			'city'               => array(
 				'label'       => __( 'Town / City', 'woocommerce-4jp' ),
@@ -223,15 +223,15 @@ function load_custom_wc4jp_admin_style() {
 				'type'	=> 'select',
 				'options' => array( '' => __( 'Select a country&hellip;', 'woocommerce' ) ) + WC()->countries->get_allowed_countries()
 				),
+			'postcode' => array(
+				'label' => __( 'Postcode', 'woocommerce' ),
+				'show'	=> false,
+				),
 			'state' => array(
 				'label' => __( 'State/County', 'woocommerce' ),
 				'show'	=> false,
 				'type'	=> 'select',
 				'options' => array( '' => __( 'Select a state&hellip;', 'woocommerce' ) )
-				),
-			'postcode' => array(
-				'label' => __( 'Postcode', 'woocommerce' ),
-				'show'	=> false,
 				),
 			'city' => array(
 				'label' => __( 'City', 'woocommerce' ),
@@ -291,15 +291,15 @@ function load_custom_wc4jp_admin_style() {
 				'type'	=> 'select',
 				'options' => array( '' => __( 'Select a country&hellip;', 'woocommerce' ) ) + WC()->countries->get_shipping_countries()
 				),
+			'postcode' => array(
+				'label' => __( 'Postcode', 'woocommerce' ),
+				'show'	=> false
+				),
 			'state' => array(
 				'label' => __( 'State/County', 'woocommerce' ),
 				'show'	=> false,
 				'type'	=> 'select',
 				'options' => array( '' => __( 'Select a state&hellip;', 'woocommerce' ) )
-				),
-			'postcode' => array(
-				'label' => __( 'Postcode', 'woocommerce' ),
-				'show'	=> false
 				),
 			'city' => array(
 				'label' => __( 'City', 'woocommerce' ),
