@@ -219,7 +219,7 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
      * @return void
      */
     public function email_instructions( $order, $sent_to_admin, $plain_text = false ) {
-    	if ( $this->instructions && ! $sent_to_admin && 'bankjp' === $order->payment_method && ('on-hold' === $order->status || 'pending' === $order->status )) {
+    	if (! $sent_to_admin && 'bankjp' === $order->payment_method && ('on-hold' === $order->status || 'pending' === $order->status )) {
 			if ( $this->instructions ) {
 				echo wpautop( wptexturize( $this->instructions ) ) . PHP_EOL;
 			}
@@ -278,8 +278,8 @@ class WC_Gateway_BANK_JP extends WC_Payment_Gateway {
 
 		$order = new WC_Order( $order_id );
 
-		// Mark as pending (we're awaiting[pending] the payment)
-		$order->update_status( 'pending', __( 'Awaiting BANK payment', 'woocommerce-4jp' ) );
+		// Mark as on-hold (we're awaiting[pending] the payment)
+		$order->update_status( 'on-hold', __( 'Awaiting BANK payment', 'woocommerce-4jp' ) );
 
 		// Reduce stock levels
 		$order->reduce_order_stock();
